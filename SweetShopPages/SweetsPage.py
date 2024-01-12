@@ -11,6 +11,8 @@ class SweetsPage:
         self.titles = ".container .row .col-lg-3 .card .card-body h4"
         self.basket = 'a[href="/basket"]'
         self.items = 'ul[id="basketItems"] .lh-condensed div h6'
+        self.header_about = "header.my-4"
+        self.about = 'a[href="/about"]'
 
     def open_page(self):
         self.driver.get(self.url)
@@ -47,3 +49,11 @@ class SweetsPage:
             items_text.append(items[i].get_attribute("innerHTML"))
 
         return items_text
+
+    def open_about(self):
+        about = self.driver.find_element(By.CSS_SELECTOR, self.about)
+        about.click()
+
+    def get_header_about(self):
+        header_about = self.driver.find_elements(By.CSS_SELECTOR, self.header_about)
+        return header_about
