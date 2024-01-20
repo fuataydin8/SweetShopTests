@@ -1,7 +1,7 @@
 # Sweet Shop Tests
 
 - This repository has some test cases i made for this website: https://sweetshop.netlify.app
-- For now these were the errors i found on the website
+- It also includes the errors i found in the website and the tests i plan to implement
 
 # Errors found
 
