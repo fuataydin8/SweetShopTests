@@ -1,13 +1,16 @@
 import os
-from collections import Counter
 
 from selenium import webdriver
 
+from SweetShopPages.AboutPage import AboutPage
+from SweetShopPages.BasketPage import BasketPage
 from SweetShopPages.SweetsPage import SweetsPage
 
 os.environ['PATH'] += r"C:/Users/vinic/Downloads/geckodriver-v0.33.0-win64"
 driver = webdriver.Firefox()
 sweets_page = SweetsPage(driver)
+basket_page = BasketPage(driver)
+about_page = AboutPage(driver)
 
 # Errors found until now:
 # 1 - When added to the basket, several names of products change inside the basket, this
@@ -30,7 +33,7 @@ class TestSweetShop:
         exp_basket = sweets_page.add_to_basket()
 
         sweets_page.open_basket()
-        basket = sweets_page.get_basket_items()
+        basket = basket_page.get_basket_items()
 
         assert exp_basket == basket
 
@@ -39,13 +42,13 @@ class TestSweetShop:
         sweets_page.open_basket()
         sweets_page.open_about()
 
-        title_about = sweets_page.get_header_about()
+        title_about = about_page.get_header_about()
         assert len(title_about) != 0
 
     def test_open_about(self):
         sweets_page.open_page()
         sweets_page.open_about()
 
-        header_about = sweets_page.get_header_about()
+        header_about = about_page.get_header_about()
         assert len(header_about) != 0
 
