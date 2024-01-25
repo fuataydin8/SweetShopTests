@@ -13,20 +13,12 @@
 
 3 - It's currently not possible to enter the "about" page from the basket page because there's no element with href="about" in it
 
-# Tests planned (✔️: Done / ❌: Not Done)
+# Tests created
 
-✔️ - Test if all the images of the sweets on the sweets page are being loaded correctly
+- Test if all the images of the sweets on the sweets page are being loaded correctly
 
-✔️ - Test if all sweets are added correctly to the basket when you press their respective "Add to Basket" buttons
+- Test if all sweets are added correctly to the basket when you press their respective "Add to Basket" buttons
 
-✔️ - Test if you can open the "About" page from the basket page
+- Test if you can open the "About" page from the basket page
 
-✔️ - Test if you can open the "About" page from the sweets page
-
-❌ - Test if you can open the "About" page from the login page
-
-❌ - Test if you can open the "About" page from the first page
-
-❌ - Test if you can open the "About" page from the about page
-
-❌ - Test if the "Browse Sweets" button on the first page redirects you to the sweets page
+ - Test if you can open the "About" page from the sweets page
